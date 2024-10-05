@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ProcessSink class from the proc library, for the Dart programming language.">
+  <title>ProcessSink class - proc library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">proc</a></li>
+    <li><a href="../proc/proc-library.html">proc.dart</a></li>
+    <li class="self-crumb">ProcessSink class</li>
+  </ol>
+  <div class="self-name">ProcessSink</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="proc&#47;proc-library-sidebar.html"
+    data-below-sidebar="proc&#47;ProcessSink-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ProcessSink</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+    <a href="https://dart.dev/language/mixins" class="feature feature-mixin" title="This class can be used as a class and a mixin.">mixin</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A sink that represents a <code>stdin</code> sink of either bytes or strings.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="https://api.dart.dev/stable/3.5.3/dart-async/StreamSink-class.html">StreamSink</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></li>
+        <li><a href="https://api.dart.dev/stable/3.5.3/dart-core/StringSink-class.html">StringSink</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ProcessSink" class="callable">
+          <span class="name"><a href="../proc/ProcessSink/ProcessSink.html">ProcessSink</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="done" class="property">
+  <span class="name"><a href="../proc/ProcessSink/done.html">done</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Return a future which is completed when the <a href="https://api.dart.dev/stable/3.5.3/dart-async/StreamSink-class.html">StreamSink</a> is finished.
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="encoding" class="property">
+  <span class="name"><a href="../proc/ProcessSink/encoding.html">encoding</a></span>
+  <span class="signature">&#8596; <a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span>
+  
+
+</dt>
+<dd>
+  Which encoding to use when writing strings.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="add" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-async/EventSink/add.html">add</a></span><span class="signature">(<wbr><span class="parameter" id="add-param-event"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds a data <code>event</code> to the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addError" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/addError.html">addError</a></span><span class="signature">(<wbr><span class="parameter" id="addError-param-error"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">error</span>, [</span><span class="parameter" id="addError-param-stackTrace"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/StackTrace-class.html">StackTrace</a>?</span> <span class="parameter-name">stackTrace</span></span>])
+    <span class="returntype parameter">&#8594; Never</span>
+  </span>
+  
+
+</dt>
+<dd>
+  <strong>Unsupported</strong>: Cnnot send errors to a process sink.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="addStream" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/addStream.html">addStream</a></span><span class="signature">(<wbr><span class="parameter" id="addStream-param-stream"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">stream</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Consumes the elements of <code>stream</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="close" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/close.html">close</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Tells the stream sink that no further streams will be added.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="write" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/write.html">write</a></span><span class="signature">(<wbr><span class="parameter" id="write-param-object"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes the string representation of <code>object</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="writeAll" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/writeAll.html">writeAll</a></span><span class="signature">(<wbr><span class="parameter" id="writeAll-param-objects"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> <span class="parameter-name">objects</span>, [</span><span class="parameter" id="writeAll-param-separator"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">separator</span> = <span class="default-value">&#39;&#39;</span></span>])
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes the elements of <code>objects</code> separated by <code>separator</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="writeCharCode" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/writeCharCode.html">writeCharCode</a></span><span class="signature">(<wbr><span class="parameter" id="writeCharCode-param-charCode"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">charCode</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes a string containing the character with code point <code>charCode</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="writeln" class="callable">
+  <span class="name"><a href="../proc/ProcessSink/writeln.html">writeln</a></span><span class="signature">(<wbr>[<span class="parameter" id="writeln-param-object"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span> = <span class="default-value">&#39;&#39;</span></span>])
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes the string representation of <code>object</code> followed by a newline.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">proc</a></li>
+    <li><a href="../proc/proc-library.html">proc</a></li>
+    <li class="self-crumb">ProcessSink class</li>
+</ol>
+
+
+    <h5>proc library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    proc
+      0.1.0-alpha
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

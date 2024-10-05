@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ProcessController class from the proc library, for the Dart programming language.">
+  <title>ProcessController class - proc library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">proc</a></li>
+    <li><a href="../proc/proc-library.html">proc.dart</a></li>
+    <li class="self-crumb">ProcessController class</li>
+  </ol>
+  <div class="self-name">ProcessController</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="proc&#47;proc-library-sidebar.html"
+    data-below-sidebar="proc&#47;ProcessController-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ProcessController</span> class 
+    <a href="https://dart.dev/language/class-modifiers#final" class="feature feature-final" title="This class can neither be extended, implemented, nor mixed in.">final</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A controller with the <a href="../proc/ProcessController/process.html">process</a> it controls.</p>
+<p>This class can be used to create an instrumented <a href="../proc/Process-class.html">Process</a> instance, either
+for implementing a custom <a href="../proc/ProcessHost-class.html">ProcessHost</a> (i.e. that does not delegate to
+<code>dart:io</code>), or for testing.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ProcessController" class="callable">
+          <span class="name"><a href="../proc/ProcessController/ProcessController.html">ProcessController</a></span><span class="signature">({<span class="parameter" id="-param-processId"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">processId</span>, </span><span class="parameter" id="-param-stdoutEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stdoutEncoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="-param-stderrEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stderrEncoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="-param-stdinEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stdinEncoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="-param-lineTerminator"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">lineTerminator</span> = <span class="default-value">&#39;\n&#39;</span>, </span><span class="parameter" id="-param-onKill"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">onKill</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../proc/ProcessSignal-class.html">ProcessSignal</a></span></span>)?, </span><span class="parameter" id="-param-onInput"><span class="type-annotation">void</span> <span class="parameter-name">onInput</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span></span>)?</span>})</span>
+        </dt>
+        <dd>
+          Creates a controller that manages a running process.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isClosed" class="property">
+  <span class="name"><a href="../proc/ProcessController/isClosed.html">isClosed</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  Whether the controller is closed.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="lineTerminator" class="property">
+  <span class="name"><a href="../proc/ProcessController/lineTerminator.html">lineTerminator</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  Line terminator used for <a href="../proc/ProcessController/addStdoutLine.html">addStdoutLine</a> and <a href="../proc/ProcessController/addStderrLine.html">addStderrLine</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onInput" class="property">
+  <span class="name"><a href="../proc/ProcessController/onInput.html">onInput</a></span>
+  <span class="signature">&#8596; void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span></span>)</span></span>
+  
+
+</dt>
+<dd>
+  Called when <a href="../proc/Process/stdin.html">Process.stdin</a> receives data.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="onKill" class="property">
+  <span class="name"><a href="../proc/ProcessController/onKill.html">onKill</a></span>
+  <span class="signature">&#8596; void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="../proc/ProcessSignal-class.html">ProcessSignal</a></span></span>)</span></span>
+  
+
+</dt>
+<dd>
+  Called when <a href="../proc/Process/kill.html">Process.kill</a> is called.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="process" class="property">
+  <span class="name"><a href="../proc/ProcessController/process.html">process</a></span>
+  <span class="signature">&#8594; <a href="../proc/Process-class.html">Process</a></span>
+  
+
+</dt>
+<dd>
+  The process that this controller is controlling.
+  <div class="features"><span class="feature">late</span><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="processId" class="property">
+  <span class="name"><a href="../proc/ProcessController/processId.html">processId</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  Process ID.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stderrEncoding" class="property">
+  <span class="name"><a href="../proc/ProcessController/stderrEncoding.html">stderrEncoding</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span>
+  
+
+</dt>
+<dd>
+  Encoding used for <a href="../proc/Process/stderrText.html">Process.stderrText</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="stdinEncoding" class="property">
+  <span class="name"><a href="../proc/ProcessController/stdinEncoding.html">stdinEncoding</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span>
+  
+
+</dt>
+<dd>
+  Encoding used for <a href="../proc/Process/stdin.html">Process.stdin</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="stdoutEncoding" class="property">
+  <span class="name"><a href="../proc/ProcessController/stdoutEncoding.html">stdoutEncoding</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span>
+  
+
+</dt>
+<dd>
+  Encoding used for <a href="../proc/Process/stdoutText.html">Process.stdoutText</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addStderr" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStderr.html">addStderr</a></span><span class="signature">(<wbr><span class="parameter" id="addStderr-param-text"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">text</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends text to <a href="../proc/Process/stderr.html">Process.stderr</a>.
+  
+
+</dd>
+
+        <dt id="addStderrBytes" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStderrBytes.html">addStderrBytes</a></span><span class="signature">(<wbr><span class="parameter" id="addStderrBytes-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends bytes to <a href="../proc/Process/stderr.html">Process.stderr</a>.
+  
+
+</dd>
+
+        <dt id="addStderrLine" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStderrLine.html">addStderrLine</a></span><span class="signature">(<wbr>[<span class="parameter" id="addStderrLine-param-line"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">line</span> = <span class="default-value">&#39;&#39;</span></span>])
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends a line to <a href="../proc/Process/stderr.html">Process.stderr</a>.
+  
+
+</dd>
+
+        <dt id="addStdout" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStdout.html">addStdout</a></span><span class="signature">(<wbr><span class="parameter" id="addStdout-param-text"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">text</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends text to <a href="../proc/Process/stdout.html">Process.stdout</a>.
+  
+
+</dd>
+
+        <dt id="addStdoutBytes" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStdoutBytes.html">addStdoutBytes</a></span><span class="signature">(<wbr><span class="parameter" id="addStdoutBytes-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends bytes to <a href="../proc/Process/stdout.html">Process.stdout</a>.
+  
+
+</dd>
+
+        <dt id="addStdoutLine" class="callable">
+  <span class="name"><a href="../proc/ProcessController/addStdoutLine.html">addStdoutLine</a></span><span class="signature">(<wbr>[<span class="parameter" id="addStdoutLine-param-line"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">line</span> = <span class="default-value">&#39;&#39;</span></span>])
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Appends a line to <a href="../proc/Process/stdout.html">Process.stdout</a>.
+  
+
+</dd>
+
+        <dt id="complete" class="callable">
+  <span class="name"><a href="../proc/ProcessController/complete.html">complete</a></span><span class="signature">(<wbr>[<span class="parameter" id="complete-param-exitCode"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../proc/ExitCode-class.html">ExitCode</a></span>&gt;</span></span> <span class="parameter-name">exitCode</span> = <span class="default-value">ExitCode.success</span></span>])
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Completes the process with the specified <code>exitCode</code>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">proc</a></li>
+    <li><a href="../proc/proc-library.html">proc</a></li>
+    <li class="self-crumb">ProcessController class</li>
+</ol>
+
+
+    <h5>proc library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    proc
+      0.1.0-alpha
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
