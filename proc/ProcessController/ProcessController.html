@@ -77,6 +77,20 @@
     
 <section class="desc markdown">
   <p>Creates a controller that manages a running process.</p>
+<ul>
+<li><a href="../../proc/ProcessController/processId.html">processId</a> is the ID of the process being controlled.</li>
+<li><a href="../../proc/ProcessController/stdoutEncoding.html">stdoutEncoding</a> is the encoding used for <a href="../../proc/Process/stdoutText.html">Process.stdoutText</a>.</li>
+<li><a href="../../proc/ProcessController/stderrEncoding.html">stderrEncoding</a> is the encoding used for <a href="../../proc/Process/stderrText.html">Process.stderrText</a>.</li>
+<li><a href="../../proc/ProcessController/stdinEncoding.html">stdinEncoding</a> is the encoding used for <a href="../../proc/Process/stdin.html">Process.stdin</a>.</li>
+<li><a href="../../proc/ProcessController/lineTerminator.html">lineTerminator</a> is used for <a href="../../proc/ProcessController/addStdoutLine.html">addStdoutLine</a> and <a href="../../proc/ProcessController/addStderrLine.html">addStderrLine</a>.</li>
+</ul>
+<p>If <code>onKill</code> is not provided, the default behavior is to complete the
+process with <a href="../../proc/ExitCode/failure-constant.html">ExitCode.failure</a>, or ignore the signal and return <code>false</code>
+if the process is already closed; a custom behavior can be provided by
+passing a callback.</p>
+<p>If <code>onInput</code> is not provided, the default behavior is to ignore the input;
+a custom behavior can be provided by passing a callback that receives the
+input data.</p>
 </section>
 
 
@@ -138,7 +152,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

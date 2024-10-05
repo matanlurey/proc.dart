@@ -79,6 +79,14 @@
     
 <section class="desc markdown">
   <p>Creates a <a href="../../proc/ProcessHost-class.html">ProcessHost</a> that runs executables in the container.</p>
+<p>The <code>stdoutEncoding</code> and <code>stderrEncoding</code> are used for the default
+encodings of the process's <code>stdout</code> and <code>stderr</code> streams, respectively,
+and the remaining parameters, similarly, configure the default inputs to
+<a href="../../proc/ProcessHost/start.html">ProcessHost.start</a> with the specified values.</p>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">final host = container.createProcessHost();
+final process = await host.start('echo', ['Hello, World!']);
+</code></pre>
 </section>
 
 
@@ -138,7 +146,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

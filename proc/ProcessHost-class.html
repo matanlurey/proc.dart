@@ -64,7 +64,16 @@
 
     
 <section class="desc markdown">
-  <p>Runs processes.</p>
+  <p>Runs processes and listens for signals on the host platform.</p>
+<p>This class is an abstract base class that delegates to the host platform,
+or to a custom implementation.</p>
+<p>To create a default process runner, use <a href="../proc/ProcessHost/ProcessHost.html">ProcessHost.new</a>.</p>
+<p>To create a custom process runner, extend this class and override the
+methods as needed.</p>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">final host = ProcessHost();
+final process = await host.start('echo', ['Hello, World!']);
+</code></pre>
 </section>
 
 
@@ -351,7 +360,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

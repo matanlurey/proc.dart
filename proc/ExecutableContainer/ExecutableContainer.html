@@ -71,7 +71,22 @@
     
 <section class="desc markdown">
   <p>Creates a new executable container.</p>
-<p>The <code>context</code> is used to resolve the path to the executable.</p>
+<p>The <code>context</code> is used to resolve the path to the executable; if omitted,
+the default context is used. The <code>onWatch</code> callback is invoked when
+<a href="../../proc/ProcessHost/watch.html">ProcessHost.watch</a> is called.</p>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">import 'package:path/path.dart' as p;
+import 'package:proc/proc.dart';
+
+void main() async {
+  final container = ExecutableContainer(
+    context: p.posix,
+    onWatch: (signal) {
+      // ...
+    }
+  );
+}
+</code></pre>
 </section>
 
 
@@ -120,7 +135,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

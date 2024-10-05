@@ -52,24 +52,30 @@
       
 <section class="desc markdown">
   <h1 id="proc">proc</h1>
-<p>Run and manage processes, including a record/replay mode for testing.</p>
+<p>Run and manage OS processes with an extensible and testable API.</p>
 <p><a href="https://github.com/matanlurey/proc.dart/actions/workflows/check.yaml"><img src="https://github.com/matanlurey/proc.dart/actions/workflows/check.yaml/badge.svg" alt="CI"></a>
 <a href="https://coveralls.io/github/matanlurey/proc.dart?branch=main"><img src="https://coveralls.io/repos/github/matanlurey/proc.dart/badge.svg?branch=main" alt="Coverage Status"></a>
 <a href="https://pub.dev/packages/proc"><img src="https://img.shields.io/pub/v/proc.svg" alt="Pub Package"></a>
 <a href="https://pub.dev/documentation/proc/latest/"><img src="https://img.shields.io/badge/dartdoc-reference-blue.svg" alt="Dartdoc reference"></a></p>
-<!--
+<h2 id="features">Features</h2>
+<p>Most use cases of running processes are typically handled by importing and using
+<code>dart:io</code> and using the <code>Process</code> class. However, the <code>proc</code> library provides a
+more flexible and extensible API for running and managing processes.</p>
+<ul>
+<li>Setting default parameters for launching processes.</li>
+<li>Cross-platform APIs that do not require <code>dart:io</code>.</li>
+<li>Create and manage individual processes using <code>ProcessController</code>.</li>
+<li>Emulate a file system like environment using <code>ExecutableContainer</code>.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<pre class="language-dart"><code class="language-dart">import 'package:proc/proc.dart';
 
-## Features
-
-TODO: Document what the package does, include screenshots, etc.
-
-## Usage
-
-```dart
-import 'package:proc/proc.dart';
-```
-
--->
+void main() async {
+  final tool = p.join('tool', 'echo.dart');
+  final host = ProcessHost();
+  final proc = await host.start(tool, ['stdout']);
+}
+</code></pre>
 <h2 id="contributing">Contributing</h2>
 <p>To run the tests, run:</p>
 <pre class="language-shell"><code class="language-shell">dart test
@@ -90,7 +96,7 @@ import 'package:proc/proc.dart';
   <span class="name"><a href="proc/proc-library.html">proc</a></span> 
 
 </dt>
-<dd>Run and manage processes, including a record/replay mode for testing.
+<dd>Run and manage OS processes with an extensible and testable API.
 </dd>
 
         </dl>
@@ -127,7 +133,7 @@ import 'package:proc/proc.dart';
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

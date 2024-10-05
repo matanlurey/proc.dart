@@ -64,6 +64,28 @@
     
 <section class="desc markdown">
   <p>A virtual container for executables that can be viewed as a <a href="../proc/ProcessHost-class.html">ProcessHost</a>.</p>
+<p>This class is useful for testing or emulating processes without actually
+running them. It allows you to set up a container with executables that
+return a <a href="../proc/Process-class.html">Process</a> when run, and produce a <a href="../proc/ProcessHost-class.html">ProcessHost</a> that responds to
+the executables in the container.</p>
+<h2 id="example">Example</h2>
+<p>Creating a container with an executable that echoes input on stdout:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:proc/proc.dart';
+
+void main() async {
+  final container = ExecutableContainer();
+  container.setExecutable('echo', (start) async {
+    late final ProcessController controller;
+    controller = ProcessController(
+      processId: 1234,
+      onInput: (data) {
+        controller.addStdoutBytes(data);
+      },
+    );
+    return controller.process;
+  });
+}
+</code></pre>
 </section>
 
 
@@ -253,7 +275,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   

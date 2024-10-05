@@ -67,6 +67,16 @@
 <p>This class can be used to create an instrumented <a href="../proc/Process-class.html">Process</a> instance, either
 for implementing a custom <a href="../proc/ProcessHost-class.html">ProcessHost</a> (i.e. that does not delegate to
 <code>dart:io</code>), or for testing.</p>
+<p>The controller can be used to simulate a process by adding data to its
+<code>stdout</code> and <code>stderr</code> streams by methods such as <a href="../proc/ProcessController/addStdoutLine.html">addStdoutLine</a> and
+<a href="../proc/ProcessController/addStderrLine.html">addStderrLine</a>, and then completing the process with <a href="../proc/ProcessController/complete.html">complete</a>.</p>
+<p>The controller can also be used to simulate input to the process's <code>stdin</code>
+stream by providing a callback to <a href="../proc/ProcessController/onInput.html">onInput</a>.</p>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">final controller = ProcessController(processId: 123);
+controller.addStdoutLine('Hello, World!');
+controller.complete(ExitCode.success);
+</code></pre>
 </section>
 
 
@@ -140,7 +150,7 @@ for implementing a custom <a href="../proc/ProcessHost-class.html">ProcessHost</
 
         <dt id="onKill" class="property">
   <span class="name"><a href="../proc/ProcessController/onKill.html">onKill</a></span>
-  <span class="signature">&#8596; void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="../proc/ProcessSignal-class.html">ProcessSignal</a></span></span>)</span></span>
+  <span class="signature">&#8596; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a> Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="../proc/ProcessSignal-class.html">ProcessSignal</a></span></span>)</span></span>
   
 
 </dt>
@@ -404,7 +414,7 @@ for implementing a custom <a href="../proc/ProcessHost-class.html">ProcessHost</
 <footer>
   <span class="no-break">
     proc
-      0.1.0-alpha
+      0.1.0
   </span>
 
   
