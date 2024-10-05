@@ -58,18 +58,32 @@
     <div>
 <h1><span class="kind-class">Process</span> class 
     <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
-    <a href="https://dart.dev/language/class-modifiers#interface" class="feature feature-interface" title="This class can only be implemented (not extended or mixed in).">interface</a>
+    <a href="https://dart.dev/language/mixins" class="feature feature-mixin" title="This class can be used as a class and a mixin.">mixin</a>
  
 </h1></div>
 
     
 <section class="desc markdown">
-  <p>Process interface</p>
+  <p>Represents a process.</p>
+<p>To create a process, see <a href="../proc/ProcessHost-class.html">ProcessHost</a> or <a href="../proc/ProcessController-class.html">ProcessController</a>.</p>
 </section>
 
 
 
     
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Process.complete" class="callable">
+          <span class="name"><a href="../proc/Process/Process.complete.html">Process.complete</a></span><span class="signature">({<span class="parameter" id="complete-param-processId"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">processId</span>, </span><span class="parameter" id="complete-param-exitCode"><span class="type-annotation"><a href="../proc/ExitCode-class.html">ExitCode</a></span> <span class="parameter-name">exitCode</span> = <span class="default-value">ExitCode.success</span>, </span><span class="parameter" id="complete-param-stdoutEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stdoutEncoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="complete-param-stdout"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">stdout</span> = <span class="default-value">const []</span>, </span><span class="parameter" id="complete-param-stderrEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stderrEncoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="complete-param-stderr"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">stderr</span> = <span class="default-value">const []</span></span>})</span>
+        </dt>
+        <dd>
+          Returns a new process that completes with the given <code>exitCode</code>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
     
   <section
       class="summary offset-anchor"
@@ -288,7 +302,7 @@
 <footer>
   <span class="no-break">
     proc
-      0.1.0
+      0.2.0
   </span>
 
   

@@ -62,7 +62,7 @@
 
     <section class="multi-line-signature">
       
-      <span class="name ">ProcessController</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-processId"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">processId</span>, </span></li>
+      <span class="name ">ProcessController</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-processId"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">processId</span>, </span></li>
 <li><span class="parameter" id="-param-stdoutEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stdoutEncoding</span> = <span class="default-value">utf8</span>, </span></li>
 <li><span class="parameter" id="-param-stderrEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stderrEncoding</span> = <span class="default-value">utf8</span>, </span></li>
 <li><span class="parameter" id="-param-stdinEncoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">stdinEncoding</span> = <span class="default-value">utf8</span>, </span></li>
@@ -78,12 +78,15 @@
 <section class="desc markdown">
   <p>Creates a controller that manages a running process.</p>
 <ul>
-<li><a href="../../proc/ProcessController/processId.html">processId</a> is the ID of the process being controlled.</li>
+<li><code>processId</code> is the ID of the process being controlled.</li>
 <li><a href="../../proc/ProcessController/stdoutEncoding.html">stdoutEncoding</a> is the encoding used for <a href="../../proc/Process/stdoutText.html">Process.stdoutText</a>.</li>
 <li><a href="../../proc/ProcessController/stderrEncoding.html">stderrEncoding</a> is the encoding used for <a href="../../proc/Process/stderrText.html">Process.stderrText</a>.</li>
 <li><a href="../../proc/ProcessController/stdinEncoding.html">stdinEncoding</a> is the encoding used for <a href="../../proc/Process/stdin.html">Process.stdin</a>.</li>
 <li><a href="../../proc/ProcessController/lineTerminator.html">lineTerminator</a> is used for <a href="../../proc/ProcessController/addStdoutLine.html">addStdoutLine</a> and <a href="../../proc/ProcessController/addStderrLine.html">addStderrLine</a>.</li>
 </ul>
+<p>If <code>processId</code> is not provided, a random process ID is generated in the
+range <code>0..32767</code>. The process ID is not guaranteed to be unique; if a
+unique process ID is required, it should be provided explicitly.</p>
 <p>If <code>onKill</code> is not provided, the default behavior is to complete the
 process with <a href="../../proc/ExitCode/failure-constant.html">ExitCode.failure</a>, or ignore the signal and return <code>false</code>
 if the process is already closed; a custom behavior can be provided by
@@ -98,14 +101,14 @@ input data.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">ProcessController({
-  required this.processId,
+  int? processId,
   this.stdoutEncoding = utf8,
   this.stderrEncoding = utf8,
   this.stdinEncoding = utf8,
   this.lineTerminator = &#39;\n&#39;,
   bool Function(ProcessSignal)? onKill,
   void Function(List&lt;int&gt;)? onInput,
-}) {
+}) : processId = processId ?? _nextProcessId() {
   onKill ??= (_) {
     if (isClosed) {
       return false;
@@ -152,7 +155,7 @@ input data.</p>
 <footer>
   <span class="no-break">
     proc
-      0.1.0
+      0.2.0
   </span>
 
   
